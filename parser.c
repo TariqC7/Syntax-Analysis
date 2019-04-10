@@ -131,6 +131,12 @@ void getChar() {
   } else {
     nextChar = line[currentIndexCount];
     currentIndexCount += 1;
+    if (isalpha(nextChar))
+      charClass = LETTER;
+    else if (isdigit(nextChar))
+      charClass = DIGIT;
+    else charClass = UNKNOWN;
+    
     
 /*****************************************************/
 /* getNonBlank - a function to call getChar until it
