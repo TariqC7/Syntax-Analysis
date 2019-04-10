@@ -52,11 +52,13 @@ int getErrorChar();
 
 /******************************************************/
 /* main driver */
-main() {
+int main(int argc, char *argv[]) {
   /* Open the input data file and process its contents */
-  if ((in_fp = fopen("front.in", "r")) == NULL)
-    printf("ERROR - cannot open front.in \n");
-    else {
+  fp = fopen("front.in", "r");
+  if (fp == NULL) {
+    fprintf(stderr,"fopen() failed in file %s at line # %d", __FILE__,__LINE__);
+    exit(EXIT_FAILURE);
+  
     getChar();
     do {
         lex();
