@@ -20,6 +20,7 @@ int currentIndexCount;
 size_t len = 0;
 ssize_t read;
 char * line = NULL;
+FILE *fp, *fopen();
 FILE *in_fp, *fopen();
 
 /* Function declarations */
@@ -255,7 +256,6 @@ void factor() {
 void error() {
   currentIndexCount -= 1;
   printf("--------------Syntax error occured in line %d in %d %c", lineNumber, getErrorChar(), line[currentIndexCount]);
-  printf("------------------\n");
 }
 
 int getErrorChar() {
