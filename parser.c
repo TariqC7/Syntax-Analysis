@@ -5,6 +5,8 @@
 arithmetic expressions */
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
+
 /* Global declarations */
 /* Variables */
 int charClass;
@@ -13,6 +15,8 @@ char nextChar;
 int lexLen;
 int token;
 int nextToken;
+int lineNumber = 0;
+int currentIndexCount;
 FILE *in_fp, *fopen();
 
 /* Function declarations */
@@ -20,6 +24,9 @@ void addChar();
 void getChar();
 void getNonBlank();
 int lex();
+void term();
+void factor();
+
 
 /* Character classes */
 #define LETTER 0
