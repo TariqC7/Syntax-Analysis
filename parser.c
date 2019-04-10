@@ -126,16 +126,12 @@ void addChar() {
 /* getChar - a function to get the next character of
 input and determine its character class */
 void getChar() {
-    if ((nextChar = getc(in_fp)) != EOF) {
-      if (isalpha(nextChar))
-          charClass = LETTER;
-    else if (isdigit(nextChar))
-         charClass = DIGIT;
-    else charClass = UNKNOWN;
-    }
-    else
-         charClass = EOF;
-}
+  if (line[currentIndexCount] == '\n' || line[currentIndexCount] == '\0') {
+    charClass = EOF;
+  } else {
+    nextChar = line[currentIndexCount];
+    currentIndexCount += 1;
+    
 /*****************************************************/
 /* getNonBlank - a function to call getChar until it
 returns a non-
