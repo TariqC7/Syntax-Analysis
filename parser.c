@@ -256,6 +256,8 @@ void factor() {
 void error() {
   currentIndexCount -= 1;
   printf("--------------Syntax error occured in line %d in %d %c", lineNumber, getErrorChar(), line[currentIndexCount]);
+  printf("------------------------------------------------------\n");
+
 }
 
 int getErrorChar() {
