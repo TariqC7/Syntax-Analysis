@@ -17,6 +17,9 @@ int token;
 int nextToken;
 int lineNumber = 0;
 int currentIndexCount;
+size_t len = 0;
+ssize_t read;
+char * line = NULL;
 FILE *in_fp, *fopen();
 
 /* Function declarations */
