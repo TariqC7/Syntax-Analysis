@@ -258,3 +258,6 @@ void error() {
   printf("------------------\n");
 }
 
+int getErrorChar() {
+  return currentIndexCount;
+}
