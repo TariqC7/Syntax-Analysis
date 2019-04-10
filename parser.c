@@ -244,4 +244,11 @@ void factor() {
       else
         error();
       }  
+   /* It was not an id, an integer literal, or a left
+    parenthesis */
+  else
+    error();
+   }  /* End of else */
+  printf("Exit <factor>\n");;
+}  /* End of function factor */
 
