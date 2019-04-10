@@ -198,7 +198,11 @@ int lex() {
           lexeme[0] = 'N';
           lexeme[1] = 'E';
           lexeme[2] = 'W';
+          lexeme[3] = 'L';
+          lexeme[4] = 'I';
+          lexeme[5] = 'E';
     } /* End of switch */
+  
     printf("Next token is: %d, Next lexeme is %s\n", nextToken, lexeme);
     return nextToken;
 } /* End of function lex */
