@@ -26,12 +26,15 @@ void getNonBlank();
 int lex();
 void term();
 void factor();
-
+void expr();
+void error();
+int getErrorChar();
 
 /* Character classes */
 #define LETTER 0
 #define DIGIT 1
 #define UNKNOWN 99
+#define NEWLINE 101
 
 /* Token codes */
 #define INT_LIT 10
