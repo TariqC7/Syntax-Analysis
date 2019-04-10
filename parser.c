@@ -206,3 +206,10 @@ int lex() {
     printf("Next token is: %d, Next lexeme is %s\n", nextToken, lexeme);
     return nextToken;
 } /* End of function lex */
+
+void expr() {
+  printf("Enter <expr>\n");
+ /* Parse the first term */
+  term();
+  while (nextToken == ADD_OP || nextToken == SUB_OP) {
+    lex();
