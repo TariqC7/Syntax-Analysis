@@ -224,3 +224,7 @@ void term() {
   factor();
   while (nextToken == MULT_OP || nextToken == DIV_OP) {
     lex();
+    factor();
+  }
+  printf("Exit <term>\n");
+}  /* End of function term */
