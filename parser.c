@@ -235,5 +235,10 @@ void factor() {
   if (nextToken == IDENT || nextToken == INT_LIT)
   /* Get the next token */
   lex();
+  else {
+    if (nextToken == LEFT_PAREN) {
+      lex();
+      expr();
+      if (nextToken == RIGHT_PAREN)
 
 
