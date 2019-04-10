@@ -228,3 +228,12 @@ void term() {
   }
   printf("Exit <term>\n");
 }  /* End of function term */
+
+void factor() {
+  printf("Enter <factor>\n");
+  /* Determine which RHS */
+  if (nextToken == IDENT || nextToken == INT_LIT)
+  /* Get the next token */
+  lex();
+
+
