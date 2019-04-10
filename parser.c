@@ -217,3 +217,10 @@ void expr() {
   }
   printf("Exit <expr>\n");
 }  /* End of function expr */
+
+void term() {
+  printf("Enter <term>\n");
+/* Parse the first factor */
+  factor();
+  while (nextToken == MULT_OP || nextToken == DIV_OP) {
+    lex();
