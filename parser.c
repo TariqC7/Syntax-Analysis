@@ -136,8 +136,9 @@ void getChar() {
     else if (isdigit(nextChar))
       charClass = DIGIT;
     else charClass = UNKNOWN;
-    
-    
+  }
+}
+       
 /*****************************************************/
 /* getNonBlank - a function to call getChar until it
 returns a non-
@@ -190,6 +191,13 @@ int lex() {
             lexeme[2] = 'F';
             lexeme[3] = 0;
             break;
+        
+        /* NEWLINE */
+        case NEWLINE:
+          nextToken = NEWLINE;
+          lexeme[0] = 'N';
+          lexeme[1] = 'E';
+          lexeme[2] = 'W';
     } /* End of switch */
     printf("Next token is: %d, Next lexeme is %s\n", nextToken, lexeme);
     return nextToken;
