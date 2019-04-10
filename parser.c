@@ -58,13 +58,18 @@ int main(int argc, char *argv[]) {
   if (fp == NULL) {
     fprintf(stderr,"fopen() failed in file %s at line # %d", __FILE__,__LINE__);
     exit(EXIT_FAILURE);
-  
+  }
+  while ((read = getline(&line, &len, fp)) != -1) {
+    lineNumber += 1;
+    currentIndexCount = 0;  
     getChar();
     do {
         lex();
-      } while (nextToken != EOF);
-    }
+        expr();
+    } while (nextToken != EOF);
+    printf("\n\n");
   }
+}
 /*****************************************************/
 /* lookup - a function to lookup operators and parentheses
 and return the token */
